@@ -1,0 +1,13 @@
+<suite name="selenium">
+    <test name="browser">
+        <classes>
+            <class name="browsers.ChromeTest">
+                <methods>
+                    <include name="openBrowserWithHeadlessMode"/>
+                </methods>
+            </class>
+            <class name="herokuApp.LoginTest">
+            </class>
+        </classes>
+    </test>
+</suite>
