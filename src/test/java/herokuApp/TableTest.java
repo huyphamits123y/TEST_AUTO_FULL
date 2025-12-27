@@ -3,6 +3,7 @@ package herokuApp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -29,7 +30,9 @@ public class TableTest {
 //    }
     @Test
     void verifyMaxDuePerson() {
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("headless=new");
+       WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //Step1: get due column
