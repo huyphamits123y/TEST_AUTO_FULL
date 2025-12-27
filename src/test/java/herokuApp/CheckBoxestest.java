@@ -9,12 +9,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class CheckBoxestest {
     private WebDriver driver;
     @BeforeMethod
     public void setup(){
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/checkboxes");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
     @Test

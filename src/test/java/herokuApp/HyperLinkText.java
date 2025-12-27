@@ -7,12 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class HyperLinkText {
     WebDriver driver;
     @Test
     public void verifyHyperLinkText(){
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://the-internet.herokuapp.com/status_codes");
+
 
         driver.findElement(By.linkText("200")).click();
         WebElement statsus200 = driver.findElement(By.xpath("//div[@class='example']/p"));

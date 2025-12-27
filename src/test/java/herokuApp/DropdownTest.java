@@ -12,11 +12,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class DropdownTest {
     WebDriver driver;
     @BeforeMethod
     void setUp(){
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @Test
     @Description("Select a option by visible text")

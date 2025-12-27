@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.Comparator;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class TableTest {
     void verifyMaxDuePerson() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/tables");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //Step1: get due column
         List<Double> dueList = driver
                 .findElements(By.xpath("//table[@id='table1']/tbody/tr/td[4]"))
