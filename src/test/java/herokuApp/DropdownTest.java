@@ -20,7 +20,8 @@ public class DropdownTest {
     @BeforeMethod
     void setUp(){
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("headless=new");
+        chromeOptions.addArguments("--headless=new");
+
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
@@ -37,9 +38,9 @@ public class DropdownTest {
     @Test
     @Description("Select multiple options")
     void selectMultipleOptions(){
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("headless=new");
-        driver = new ChromeDriver(chromeOptions);
+
+
+        driver.get("https://output.jsbin.com/osebed/2");
         Select select = new Select(driver.findElement(By.id("fruits")));
         select.selectByVisibleText("Banana");
         select.selectByVisibleText("Apple");
