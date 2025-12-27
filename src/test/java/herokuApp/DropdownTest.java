@@ -49,7 +49,7 @@ public class DropdownTest {
         Assert.assertTrue(isSelected(getOption("Apple")));
         Assert.assertTrue(isSelected(getOption("Grape")));
         Assert.assertFalse(isSelected(getOption("Orange")));
-        select.deselectByValue("Apple");
+        select.deselectByValue("apple");
         Assert.assertTrue(isSelected(getOption("Banana")));
         Assert.assertFalse(isSelected(getOption("Apple")));
         Assert.assertTrue(isSelected(getOption("Grape")));
