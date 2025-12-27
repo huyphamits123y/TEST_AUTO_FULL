@@ -37,7 +37,9 @@ public class DropdownTest {
     @Test
     @Description("Select multiple options")
     void selectMultipleOptions(){
-        driver.get("https://output.jsbin.com/osebed/2");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("headless=new");
+        driver = new ChromeDriver(chromeOptions);
         Select select = new Select(driver.findElement(By.id("fruits")));
         select.selectByVisibleText("Banana");
         select.selectByVisibleText("Apple");

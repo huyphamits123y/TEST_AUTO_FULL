@@ -42,13 +42,13 @@ public class CheckBoxestest {
         // lấy con đầu tiên
         WebElement checkbox1 = driver.findElement(By.cssSelector("#checkboxes > input:nth-of-type(1)"));
         uncheck(checkbox1);
-        Assert.assertFalse(driver.findElement(By.xpath("#checkboxes > input:nth-of-type(1)")).isSelected());
+        Assert.assertFalse(driver.findElement(By.cssSelector("#checkboxes > input:nth-of-type(1)")).isSelected());
 
 //        WebElement checkbox2 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[2]"));
         // lấy con thứ 2
         WebElement checkbox2 = driver.findElement(By.cssSelector("#checkboxes > input:nth-of-type(2)"));
         uncheck(checkbox2);
-        Assert.assertFalse(driver.findElement(By.xpath("#checkboxes > input:nth-of-type(2)")).isSelected());
+        Assert.assertFalse(driver.findElement(By.cssSelector("#checkboxes > input:nth-of-type(2)")).isSelected());
     }
     public void check(WebElement checkbox){
         if (!checkbox.isSelected()){
