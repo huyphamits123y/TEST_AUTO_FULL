@@ -7,6 +7,19 @@
                 </methods>
             </class>
             <class name="herokuApp.LoginTest">
+
+            </class>
+            <class name="herokuApp.CheckBoxestest">
+
+            </class>
+            <class name="herokuApp.DropdownTest">
+
+            </class>
+            <class name="herokuApp.HyperLinkText">
+
+            </class>
+            <class name="herokuApp.TableTest">
+
             </class>
         </classes>
     </test>
