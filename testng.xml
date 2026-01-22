@@ -16,6 +16,7 @@
             <class name="herokuApp.DropdownTest">
 
             </class>
+
             <class name="herokuApp.HyperLinkText">
 
             </class>
@@ -23,6 +24,9 @@
 
             </class>
             <class name="herokuApp.SignInTest">
+
+            </class>
+            <class name="herokuApp.TodoTest">
 
             </class>
         </classes>
