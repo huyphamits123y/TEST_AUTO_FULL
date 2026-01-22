@@ -19,17 +19,17 @@ public class Browsers {
     public static WebDriverWait wait;
 
     public static WebDriver setDriver(String browser) {
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--headless=new");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
         switch (browser) {
             case "chrome":
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
                 break;
             default:
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(chromeOptions);
                 break;
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
