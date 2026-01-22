@@ -22,9 +22,9 @@
             <class name="herokuApp.TableTest">
 
             </class>
-                        <class name="herokuApp.SignInTest">
+            <class name="herokuApp.SignInTest">
 
-                        </class>
+            </class>
         </classes>
     </test>
 </suite>

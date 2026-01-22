@@ -32,7 +32,9 @@ public class TableTest {
     WebElement firstName1;
     @Test
     public void verifyMaxDuePerson(){
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
         // Lấy tất cả giá trị của dòng tiêu đề
        List <WebElement> webElement = driver.findElements(By.xpath("//table[@id=\"table1\"]//th"));
@@ -88,7 +90,9 @@ public class TableTest {
 
     @Test
     public void verifyMinDuePersonx(){
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
 
         List<Double> dueList1 = driver.findElements(By.xpath("//table[@id=\"table1\"]//tr/td[4]"))
@@ -124,7 +128,9 @@ public class TableTest {
 
     @Test
     public void verifyMaxDuePerson1(){
-    WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
+    WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
         List<Double> list = driver.findElements(By.xpath("//table[@id=\"table1\"]//tr/td[4]"))
                 .stream()
@@ -136,7 +142,9 @@ public class TableTest {
     }
     @Test
     public void verifyMinDuePerson(){
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
         List<Double> list = driver.findElements(By.xpath("//table[@id=\"table1\"]//tr/td[4]"))
                 .stream()
@@ -155,7 +163,9 @@ public class TableTest {
     }
     @Test
     public void verifyMinDueClassPerson(){
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
         List<Double> list = driver.findElements(By.xpath("//table[@id=\"table1\"]//tr/td[4]"))
                 .stream()

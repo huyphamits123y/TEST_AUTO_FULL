@@ -4,6 +4,7 @@ import className.Person;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,9 @@ public class TableTestPerson {
     List<Person> personList = new ArrayList<>();
     @BeforeClass
     public void setUp(){
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless=new");
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://the-internet.herokuapp.com/tables");
         driver.findElements(By.xpath("//table[@id='table1']/tbody/tr")).forEach(i -> {
             String[] chuoi = i.getText().split(" ");
