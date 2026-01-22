@@ -1,26 +1,30 @@
 <suite name="selenium">
+    <parameter name="browser" value="chrome"></parameter>
     <test name="browser">
         <classes>
-            <class name="browsers.ChromeTest">
-                <methods>
-                    <include name="openBrowserWithHeadlessMode"/>
-                </methods>
-            </class>
-            <class name="herokuApp.LoginTest">
+<!--            <class name="browsers.ChromeTest">-->
+<!--                <methods>-->
+<!--                    <include name="openBrowserWithHeadlessMode"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="herokuApp.LoginTest">-->
 
-            </class>
-            <class name="herokuApp.CheckBoxestest">
+<!--            </class>-->
+<!--            <class name="herokuApp.CheckBoxesTest">-->
 
-            </class>
-            <class name="herokuApp.DropdownTest">
+<!--            </class>-->
+<!--            <class name="herokuApp.DropdownTest">-->
 
-            </class>
-            <class name="herokuApp.HyperLinkText">
+<!--            </class>-->
+<!--            <class name="herokuApp.HyperLinkText">-->
 
-            </class>
-            <class name="herokuApp.TableTest">
+<!--            </class>-->
+<!--            <class name="herokuApp.TableTest">-->
 
-            </class>
+<!--            </class>-->
+                        <class name="herokuApp.SignInTest">
+
+                        </class>
         </classes>
     </test>
 </suite>
