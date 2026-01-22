@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -34,6 +35,8 @@ public class TodoPage {
     }
 
     public void deleteTodo(String todo) {
+        Actions actions = new Actions(Browsers.driver);
+        actions.moveToElement(Browsers.getElement(By.xpath("//label[.='" + todo + "']"))).perform();
         By deleteButton = By.xpath("//ul[@class='todo-list']//label[.='" + todo + "']/following-sibling::button");
         Browsers.click(deleteButton);
     }
