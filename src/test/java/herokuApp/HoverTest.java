@@ -19,4 +19,5 @@ public class HoverTest {
         actions.moveToElement(avatar1).perform();
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='example']/div[1]/div[@class='figcaption']/h5")).isDisplayed());
     }
+    // HOVER TEST
 }
