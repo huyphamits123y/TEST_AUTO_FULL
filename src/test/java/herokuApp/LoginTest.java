@@ -82,4 +82,5 @@ public class LoginTest {
         driver.findElement(By.cssSelector("button[type='submit']")).click();
         Assert.assertTrue(driver.findElement(By.className("error")).getText().contains("Your password is invalid!"));
     }
+    //LOGIN TEST CASES
 }
