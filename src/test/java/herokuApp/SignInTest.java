@@ -48,4 +48,5 @@ public class SignInTest extends Browsers {
             Assert.assertTrue(getText(By.className("error")).contains(expectedMessage));
         }
     }
+    //SinInTest
 }
